@@ -25,13 +25,14 @@
 
 <script setup>
 import { computed } from 'vue'
-defineProps({
+const props = defineProps({
   blok: {
     type: Object,
     default: () => {},
   },
 })
+const storyblokApi = useStoryblokApi()
 const articleBody = computed(() => {
-  return this.$storyapi.richTextResolver.render(this.blok.body)
+  return storyblokApi.richTextResolver.render(props.blok.body)
 })
 </script>
