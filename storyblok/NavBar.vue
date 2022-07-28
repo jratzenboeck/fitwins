@@ -1,6 +1,6 @@
 <template>
   <header class="flex justify-between p-4 bg-gray-600 text-white shadow-lg" v-editable="blok">
-    <h3>{{ blok.logo }}</h3>
+    <h3><nuxt-link to="/">{{ blok.logo }}</nuxt-link></h3>
     <nav class="inline-block">
       <component
         :is="navItem.component"
